@@ -1,0 +1,31 @@
+<div class="container d-flex justify-content-center align-middle mt-5">
+    <form class="w-50 " (ngSubmit)="onSubmit()" #clientForm="ngForm">
+        <div class="form-group mb-2">
+            <label for="nom">Nom</label>
+            <input type="text" [(ngModel)]="client.nom" class="form-control" id="nom" name="nom" placeholder="Nom"
+                #nom="ngModel">
+        </div>
+        <div class="form-group mb-2">
+            <label for="exampleInputPassword1">Prénom</label>
+            <input type="text" [(ngModel)]="client.prenom" class="form-control" id="prenom" name="prenom"
+                placeholder="Prénom" #prenom="ngModel">
+        </div>
+        <div class="form-group mb-2">
+            <label for="email">Email</label>
+            <input type="text" [(ngModel)]="client.email" class="form-control" id="email" name="email"
+                placeholder="Email" #email="ngModel">
+        </div>
+        <div class="form-group mb-2">
+            <label for="motDePasse">Mot de passe</label>
+            <input type="text" [(ngModel)]="client.motDePasse" class="form-control" id="motDePasse" name="motDePasse"
+                placeholder="Mot de Passe" #motDePasse="ngModel">
+        </div>
+        <div class="form-group mb-4">
+            <label for="numeroDeTelephone">Téléphone</label>
+            <input type="text" [(ngModel)]="client.numeroDeTelephone" class="form-control" id="numeroDeTelephone"
+                name="numeroDeTelephone" placeholder="Numero De Téléphone" #numeroDeTelephone="ngModel">
+        </div>
+        <button type="submit" class="btn btn-success" routerLink="/ajouterClient">S'enregistrer</button>
+        <button type="submit" class="btn btn-primary">Revenir à la page d'accueil</button>
+    </form>
+</div>
