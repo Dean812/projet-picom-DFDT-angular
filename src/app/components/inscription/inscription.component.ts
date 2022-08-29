@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Client } from 'src/app/business/client';
-import { Utilisateur } from 'src/app/business/utilisateur';
 import { InscriptionService } from 'src/app/services/inscription.service';
 
 @Component({
@@ -12,7 +11,6 @@ import { InscriptionService } from 'src/app/services/inscription.service';
 export class InscriptionComponent implements OnInit {
 
   client: Client;
-  utilisateurs!: Utilisateur[];
 
   constructor(
     private route: ActivatedRoute,
@@ -26,13 +24,7 @@ export class InscriptionComponent implements OnInit {
   onSubmit() {
     this.inscriptionService.ajouterClient(this.client).subscribe(client => {
       console.log(client);
-      // this.router.navigate(['/index']);
-    }
-    );
+      // this.router.navigate(['/index']); //sera utilisé pour la redirection vers la page de connexion
+    });
   }
-
-  goToLogin() {
-
-  }
-
 }
